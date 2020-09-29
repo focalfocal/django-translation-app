@@ -1,0 +1,1 @@
+Django se creó en el otoño de 2003, cuando los programadores web del periódico Lawrence Journal-World, Adrian Holovaty y Simon Willison, comenzaron a usar Python para crear aplicaciones. 

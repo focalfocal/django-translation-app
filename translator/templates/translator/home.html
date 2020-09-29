@@ -1,0 +1,23 @@
+{% extends 'translator/base.html' %}
+
+{% block content %}
+  <h4>English text to translate to Spanish:</h4>
+  <form action="" method="post">
+    {% csrf_token %}
+    <textarea rows='10' cols='50' id="the_text" name="the_text" value="{{ request.POST.the_text }}" type="text"></textarea>
+    <button type="submit">Submit</button>
+  </form> 
+  <br/>
+
+  {% if translated_text %}
+    <h4>Original text:</h4>
+    <p>{{ the_text }}</p>
+
+    <h4>Translated to Spanish:</h4>
+    <p>{{ translated_text }}</p>
+  {% endif %}
+
+  {% if error_msg %}
+    <h4>{{error_msg}}</h4>
+  {% endif %}
+{% endblock %}
